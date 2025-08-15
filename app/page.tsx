@@ -8,8 +8,8 @@ function Nav() {
     return (
         <nav className="flex items-center justify-between py-5 max-w-6xl mx-auto px-6">
             <div className="flex items-center gap-1">
-                <Image src="/logo-icon.png" alt="Trustless Tech" width={36} height={36} className="w-9 h-9" />
-                <span className="font-semibold text-xl tracking-tight">Trustless Tech</span>
+                <Image src="/logo-icon.png" alt="trustless tech" width={36} height={36} className="w-9 h-9" />
+                <span className="font-semibold text-xl tracking-tight">trustless tech</span>
             </div>
             <div className="hidden md:flex items-center gap-8 text-sm">
                 <a href="#features" className="hover:opacity-80">Features</a>
@@ -37,7 +37,7 @@ export default function Page() {
                                    className="text-4xl md:text-6xl font-semibold leading-tight">
                             We ship <span className="underline decoration-black/15">trustless</span> systems.
                             <br/> <span
-                            className="text-2xl md:text-3xl text-gray-700">Faster. Safer. Bespoke.</span>
+                            className="text-2xl md:text-3xl text-gray-700">Build the change you want to see.</span>
                         </motion.h1>
                         <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
                             Blockchain design, implementation, and hardening.
@@ -71,10 +71,10 @@ export default function Page() {
                                     transition={{duration: 0.6, delay: 0.1}}
                                     className="rounded-3xl p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-100 shadow-[0_20px_60px_-25px_rgba(0,0,0,0.2)]">
                         <div className="flex items-center gap-3">
-                                <Image src="/logo-icon.png" alt="Trustless Tech" width={48} height={48} className="w-12 h-12" />
+                                <Image src="/logo-icon.png" alt="trustless tech" width={48} height={48} className="w-12 h-12" />
                                 <div>
-                                    <h3 className="font-semibold text-lg">Trustless Tech</h3>
-                                    <p className="text-sm text-gray-500">Rust · Substrate · Polkadot · Security</p>
+                                    <h3 className="font-semibold text-lg">Blockchain Development & Security</h3>
+                                    <p className="text-sm text-gray-500">Rust · Substrate · Polkadot</p>
                                 </div>
                             </div>
                             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
@@ -166,9 +166,9 @@ export default function Page() {
                 <footer id="contact" className="mt-16 md:mt-24 py-10 text-sm text-gray-600">
                     <div className="flex flex-col md:flex-row justify-between gap-6 border-t border-gray-200 pt-6">
                         <div className="flex items-center gap-3">
-                            <Image src="/logo-icon.png" alt="Trustless Tech" width={28} height={28} className="w-7 h-7" />
+                            <Image src="/logo-icon.png" alt="trustless tech" width={28} height={28} className="w-7 h-7" />
                             <div>
-                                <div className="font-medium">Trustless Tech</div>
+                                <div className="font-medium">trustless tech</div>
                                 <div className="text-gray-500">Sofia · Ljubljana · World</div>
                             </div>
                         </div>
