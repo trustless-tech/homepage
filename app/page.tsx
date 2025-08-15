@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-// import LogoMark from "@/components/LogoMark";
+import Image from "next/image";
 
 function Nav() {
     return (
         <nav className="flex items-center justify-between py-5 max-w-6xl mx-auto px-6">
-            <div className="flex items-center gap-3">
-                {/*<LogoMark className="w-9 h-9" />*/}
+            <div className="flex items-center gap-1">
+                <Image src="/logo-icon.png" alt="Trustless Tech" width={36} height={36} className="w-9 h-9" />
                 <span className="font-semibold text-xl tracking-tight">Trustless Tech</span>
             </div>
             <div className="hidden md:flex items-center gap-8 text-sm">
@@ -53,7 +53,7 @@ export default function Page() {
                     <div className="relative md:pl-8">
                         <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }} className="rounded-3xl p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-100 shadow-[0_20px_60px_-25px_rgba(0,0,0,0.2)]">
                             <div className="flex items-center gap-3">
-                                {/*<LogoMark className="w-12 h-12" />*/}
+                                <Image src="/logo-icon.png" alt="Trustless Tech" width={48} height={48} className="w-12 h-12" />
                                 <div>
                                     <h3 className="font-semibold text-lg">Unified Asset & XCM Engineering</h3>
                                     <p className="text-sm text-gray-500">Bridges · Assets · XCM v4 · Governance</p>
@@ -155,7 +155,7 @@ export default function Page() {
                 <footer id="contact" className="mt-16 md:mt-24 py-10 text-sm text-gray-600">
                     <div className="flex flex-col md:flex-row justify-between gap-6 border-t border-gray-200 pt-6">
                         <div className="flex items-center gap-3">
-                            {/*<LogoMark className="w-7 h-7" />*/}
+                            <Image src="/logo-icon.png" alt="Trustless Tech" width={28} height={28} className="w-7 h-7" />
                             <div>
                                 <div className="font-medium">Trustless Tech</div>
                                 <div className="text-gray-500">Sofia · Ljubljana · Remote</div>
