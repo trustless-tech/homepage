@@ -5,49 +5,59 @@ import { motion } from "framer-motion";
 // Drop brand SVGs into /public/logos with these names.
 // You can swap colors to match official brand guides.
 const LOGOS = [
-    { name: "Polkadot", src: "/logos/polkadot.svg", color: "#E6007A", href: "https://polkadot.network" },
-    { name: "Hydration", src: "/logos/polkadot.svg", color: "#00E0B8", href: "https://hydration.net" },
-    { name: "OriginTrail", src: "/logos/polkadot.svg", color: "#3D5AFE", href: "https://origintrail.io" },
-    { name: "Neuroweb", src: "/logos/polkadot.svg", color: "#3D5AFE", href: "https://origintrail.io" },
+    { name: "Polkadot", src: "/img/logos/polkadot.svg", color: "#E6007A", href: "https://polkadot.network" },
+    { name: "Hydration", src: "/img/logos/hydration.svg", color: "#DDAFF1", href: "https://hydration.net" },
+    { name: "OriginTrail", src: "/img/logos/origin-trail.svg", color: "#3D5AFE", href: "https://origintrail.io" },
+    { name: "Neuroweb", src: "/img/logos/neuroweb.svg", color: "#000000", href: "https://neuroweb.ai/" },
 ] as const;
 
 type Logo = (typeof LOGOS)[number];
 
 function Card({ item }: { item: Logo }) {
+    const colorWithOpacity = (color: string, opacity: number) => 
+        color + Math.round(opacity * 255).toString(16).padStart(2, '0');
+    
     return (
         <motion.a
-            whileHover={{ y: -3, boxShadow: "0 20px 40px -20px rgba(0,0,0,0.35)" }}
+            whileHover={{ 
+                y: -3, 
+                scale: 1.03,
+                boxShadow: `0 25px 50px -12px ${colorWithOpacity(item.color, 0.3)}` 
+            }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             href={item.href}
             target="_blank"
             rel="noreferrer"
-            className="group relative rounded-2xl border bg-white p-4 transition"
-            style={{ borderColor: item.color }}
+            className="group relative rounded-xl p-3 backdrop-blur-sm transition-all duration-200 overflow-hidden"
+            style={{
+                background: `linear-gradient(135deg, ${colorWithOpacity(item.color, 0.05)} 0%, ${colorWithOpacity(item.color, 0.02)} 100%)`,
+                border: `1px solid ${colorWithOpacity(item.color, 0.15)}`
+            }}
         >
-            {/* Color bar */}
+            {/* Animated gradient border on hover */}
             <div
-                className="absolute inset-x-0 -top-px h-1 rounded-t-2xl"
-                style={{ background: item.color }}
-            />
-            {/* Soft tint */}
-            <div
-                aria-hidden
-                className="absolute inset-0 rounded-2xl"
+                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{
-                    background:
-                        `radial-gradient(40% 55% at 20% -10%, ${item.color}15 0%, transparent 60%)`,
+                    background: `linear-gradient(135deg, ${colorWithOpacity(item.color, 0.1)} 0%, transparent 50%, ${colorWithOpacity(item.color, 0.1)} 100%)`,
+                    backgroundSize: '200% 200%',
+                    animation: 'gradient 3s ease infinite'
                 }}
             />
-            <div className="relative flex h-14 items-center justify-center">
+            
+            {/* Top accent line */}
+            <div
+                className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-current to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-200"
+                style={{ color: item.color }}
+            />
+            
+            <div className="relative flex h-14 items-center justify-center px-2">
                 <Image
                     src={item.src}
                     alt={item.name}
-                    width={130}
-                    height={44}
-                    className="object-contain"
+                    width={140}
+                    height={48}
+                    className="object-contain w-full h-full max-w-[140px] filter transition-all duration-200 group-hover:brightness-110 group-hover:contrast-110"
                 />
-            </div>
-            <div className="relative mt-3 text-center text-sm font-medium" style={{ color: item.color }}>
-                {item.name}
             </div>
         </motion.a>
     );
@@ -56,16 +66,12 @@ function Card({ item }: { item: Logo }) {
 export default function TrustedBy() {
     return (
         <section className="mt-16 md:mt-24">
-            <div className="text-xs uppercase tracking-wider text-gray-500 mb-4">Trusted by builders from</div>
+            <div className="text-xs uppercase tracking-wider text-gray-500 mb-4">Trusted by visionaries</div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                 {LOGOS.map((item) => (
                     <Card key={item.name} item={item} />
                 ))}
             </div>
-            <p className="mt-3 text-xs text-gray-500">
-                Place partner logos at <code>/public/logos</code> (SVG preferred). Filenames: <code>polkadot.svg</code>,
-                <code>hydration.svg</code>, <code>origintrail.svg</code>, <code>parity.svg</code>, <code>assethub.svg</code>, <code>evm.svg</code>.
-            </p>
         </section>
     );
 }

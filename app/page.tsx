@@ -32,32 +32,49 @@ export default function Page() {
                 {/* Hero */}
                 <section className="grid md:grid-cols-2 gap-12 items-center pt-10 md:pt-20">
                     <div>
-                        <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-6xl font-semibold leading-tight">
-                            Ship <span className="underline decoration-black/15">trustless</span> systems.
-                            <br /> <span className="text-2xl md:text-3xl text-gray-700">Faster. Safer. Production-grade.</span>
+                        <motion.h1 initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}}
+                                   transition={{duration: 0.6}}
+                                   className="text-4xl md:text-6xl font-semibold leading-tight">
+                            We ship <span className="underline decoration-black/15">trustless</span> systems.
+                            <br/> <span
+                            className="text-2xl md:text-3xl text-gray-700">Faster. Safer. Production-grade.</span>
                         </motion.h1>
                         <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
-                            We design, audit, and implement Substrate runtimes, EVM layers, and cross-chain protocols.
-                            From ideation to mainnet, Trustless Tech is your senior engineering partner for Polkadot, Ethereum, and beyond.
+                            Blockchain design, implementation, and hardening.
+                        </p>
+                        <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
+
                         </p>
                         <div id="cta" className="mt-8 flex flex-col sm:flex-row gap-3">
-                            <a href="mailto:info@trustless-tech.com" className="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-black text-white hover:bg-gray-800 transition shadow-md">Book a discovery call</a>
-                            <a href="#open-source" className="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-gray-200 hover:border-gray-300">Explore our repos</a>
+                            <a href="mailto:info@trustless-tech.com"
+                               className="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-black text-white hover:bg-gray-800 transition shadow-md">Book
+                                a discovery call</a>
+                            <a href="#open-source"
+                               className="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-gray-200 hover:border-gray-300">Explore
+                                our repos</a>
                         </div>
                         <div className="mt-8 flex items-center gap-6 text-xs text-gray-500">
-                            <div className="flex items-center gap-2"><span className="inline-block w-2 h-2 rounded-full bg-emerald-500" />Production-grade runtimes</div>
-                            <div className="flex items-center gap-2"><span className="inline-block w-2 h-2 rounded-full bg-indigo-500" />Security-first delivery</div>
-                            <div className="flex items-center gap-2"><span className="inline-block w-2 h-2 rounded-full bg-fuchsia-500" />Open-source DNA</div>
+                            <div className="flex items-center gap-2"><span
+                                className="inline-block w-2 h-2 rounded-full bg-emerald-500"/>Production-grade runtimes
+                            </div>
+                            <div className="flex items-center gap-2"><span
+                                className="inline-block w-2 h-2 rounded-full bg-indigo-500"/>Security-first delivery
+                            </div>
+                            <div className="flex items-center gap-2"><span
+                                className="inline-block w-2 h-2 rounded-full bg-fuchsia-500"/>Open-source DNA
+                            </div>
                         </div>
                     </div>
 
                     <div className="relative md:pl-8">
-                        <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }} className="rounded-3xl p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-100 shadow-[0_20px_60px_-25px_rgba(0,0,0,0.2)]">
-                            <div className="flex items-center gap-3">
+                        <motion.div initial={{opacity: 0, scale: 0.98}} animate={{opacity: 1, scale: 1}}
+                                    transition={{duration: 0.6, delay: 0.1}}
+                                    className="rounded-3xl p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-100 shadow-[0_20px_60px_-25px_rgba(0,0,0,0.2)]">
+                        <div className="flex items-center gap-3">
                                 <Image src="/logo-icon.png" alt="Trustless Tech" width={48} height={48} className="w-12 h-12" />
                                 <div>
-                                    <h3 className="font-semibold text-lg">Unified Asset & XCM Engineering</h3>
-                                    <p className="text-sm text-gray-500">Bridges · Assets · XCM v4 · Governance</p>
+                                    <h3 className="font-semibold text-lg">Trustless Tech</h3>
+                                    <p className="text-sm text-gray-500">Rust · Substrate · Polkadot · Security</p>
                                 </div>
                             </div>
                             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
