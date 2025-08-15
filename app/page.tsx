@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import TrustedBy from "@/app/components/TrustedBy";
 
 function Nav() {
     return (
@@ -33,7 +34,7 @@ export default function Page() {
                     <div>
                         <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-6xl font-semibold leading-tight">
                             Ship <span className="underline decoration-black/15">trustless</span> systems.
-                            <br /> Faster. Safer. Audit-ready.
+                            <br /> <span className="text-2xl md:text-3xl text-gray-700">Faster. Safer. Production-grade.</span>
                         </motion.h1>
                         <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
                             We design, audit, and implement Substrate runtimes, EVM layers, and cross-chain protocols.
@@ -69,14 +70,7 @@ export default function Page() {
                 </section>
 
                 {/* Logos */}
-                <section className="mt-16 md:mt-24">
-                    <div className="text-xs uppercase tracking-wider text-gray-500 mb-4">Trusted by builders from</div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 opacity-70">
-                        {["Polkadot","Hydration","OriginTrail","Parity","Asset Hub","EVM"].map((n) => (
-                            <div key={n} className="border border-gray-100 rounded-xl p-3 text-center text-sm bg-white">{n}</div>
-                        ))}
-                    </div>
-                </section>
+                <TrustedBy />
 
                 {/* Features */}
                 <section id="features" className="mt-20 md:mt-28">
@@ -158,12 +152,11 @@ export default function Page() {
                             <Image src="/logo-icon.png" alt="Trustless Tech" width={28} height={28} className="w-7 h-7" />
                             <div>
                                 <div className="font-medium">Trustless Tech</div>
-                                <div className="text-gray-500">Sofia · Ljubljana · Remote</div>
+                                <div className="text-gray-500">Sofia · Ljubljana · World</div>
                             </div>
                         </div>
                         <div className="space-y-1">
                             <div><span className="text-gray-500">Email:</span> <a className="underline" href="mailto:info@trustless-tech.com">info@trustless-tech.com</a></div>
-                            <div><span className="text-gray-500">ENS:</span> trustless-tech.eth (optional)</div>
                             <div>© {new Date().getFullYear()} Trustless Tech. All rights reserved.</div>
                         </div>
                     </div>
