@@ -37,7 +37,7 @@ export default function Page() {
                                    className="text-4xl md:text-6xl font-semibold leading-tight">
                             We ship <span className="underline decoration-black/15">trustless</span> systems.
                             <br/> <span
-                            className="text-2xl md:text-3xl text-gray-700">Faster. Safer. Production-grade.</span>
+                            className="text-2xl md:text-3xl text-gray-700">Faster. Safer. Bespoke.</span>
                         </motion.h1>
                         <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
                             Blockchain design, implementation, and hardening.
