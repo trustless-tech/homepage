@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Trustless Tech — Ship trustless systems",
+    title: "Trustless Tech — Rust and Substrate Development Studio",
     description: "Substrate runtimes, EVM layers, XCM & assets, benchmarks and fuzzing.",
 };
 
