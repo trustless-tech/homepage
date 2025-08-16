@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ContactBox from "@/app/components/ContactBox";
 import TrustedBy from "@/app/components/TrustedBy";
 
 function Nav() {
@@ -34,10 +35,7 @@ export default function Page() {
                         <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
                             Blockchain design, implementation, and hardening.
                         </p>
-                        <div id="cta" className="mt-8 flex flex-col sm:flex-row gap-3">
-                            <a href="mailto:info@trustless-tech.com"
-                               className="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-black text-white hover:bg-gray-800 transition shadow-md">Get in Touch</a>
-                        </div>
+                        <ContactBox />
                         <div className="mt-8 flex items-center gap-6 text-xs text-gray-500">
                             <div className="flex items-center gap-2"><span
                                 className="inline-block w-2 h-2 rounded-full bg-emerald-500"/>Production-grade runtimes
@@ -84,7 +82,7 @@ export default function Page() {
                 <TrustedBy />
 
                 {/* Footer */}
-                <footer id="contact" className="mt-16 md:mt-12 py-10 text-sm text-gray-600">
+                <footer id="contact" className="mt-12 md:mt-6 py-10 text-sm text-gray-600">
                     <div className="flex flex-col md:flex-row justify-between gap-6 border-t border-gray-200 pt-6">
                         <div className="flex items-center gap-3">
                             <Image src="/logo-icon.png" alt="trustless tech" width={28} height={28} className="w-7 h-7" />

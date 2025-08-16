@@ -65,7 +65,7 @@ function Card({ item }: { item: Logo }) {
 
 export default function TrustedBy() {
     return (
-        <section className="mt-16 md:mt-24">
+        <section className="mt-16 md:mt-12">
             <div className="text-xs uppercase tracking-wider text-gray-500 mb-4">Trusted by visionaries</div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                 {LOGOS.map((item) => (
