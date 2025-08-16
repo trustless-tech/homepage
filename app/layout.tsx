@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
     title: "Trustless Tech — Rust and Substrate Development Studio",
-    description: "Substrate runtimes, EVM layers, XCM & assets, benchmarks and fuzzing.",
+    description: "We help you build the change you want to see in the world.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

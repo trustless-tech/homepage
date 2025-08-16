@@ -30,12 +30,13 @@ export default function Page() {
                                    transition={{duration: 0.6}}
                                    className="text-4xl md:text-6xl font-semibold leading-none">
                             We ship <span className="underline decoration-black/15">trustless</span> systems.
-                            <br/> <span className="text-lg md:text-2xl text-gray-700">Helping you build change you want to see.</span>
+                            <br/>
                         </motion.h1>
+                        <p className="mt-3 text-md md:text-2xl text-gray-700">Helping you build change you want to see.</p>
                         <p className="mt-5 text-gray-600 md:text-lg max-w-prose">
                             Blockchain design, implementation, and hardening.
                         </p>
-                        <ContactBox />
+                        <ContactBox/>
                         <div className="mt-8 flex items-center gap-6 text-xs text-gray-500">
                             <div className="flex items-center gap-2"><span
                                 className="inline-block w-2 h-2 rounded-full bg-emerald-500"/>Production-grade runtimes
